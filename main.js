@@ -25,7 +25,7 @@ function renderAboutMeContent() {
         <article class="about-me-section">
             <section class="about-me-info">
                 <div class="about-me-card">
-                    <img src="images/${aboutMe[0].image}">
+                    <img src="./images/${aboutMe[0].image}">
                     <div>
                         <h2>${aboutMe[0].title}</h2>
                         <p>${aboutMe[0].subContent}</p>
@@ -49,7 +49,7 @@ function renderblogPage(blogId) {
                 <h2>${blogObj.title}</h2>
                 <p>${blogObj.content}</p>
             </div>
-                <img src="/images/${blogObj.image}">
+                <img src="./images/${blogObj.image}">
                 <div class="about-me-content">${aboutMe[0].fullContent}</div>
         </section>
         `
@@ -64,7 +64,7 @@ function renderHomePage() {
     blogs.forEach((blog) => {
         if (blog.id === 1) {
             hederBlogHtml = `
-            <section class="main-blog" style="background-image: url(/images/${blog.image});">
+            <section class="main-blog" style="background-image: url(./images/${blog.image});">
                 <p>${blog.date}</p>
                 <h2 data-blogid="${blog.id}">${blog.title}</h2>
                 <p>${blog.content}</p>
@@ -73,7 +73,7 @@ function renderHomePage() {
         } else {
             articleHome.innerHTML += `
             <section class="blog-cards">
-                <img src="/images/${blog.image}">
+                <img src="./images/${blog.image}">
                 <p>${blog.date}</p>
                 <h2 data-blogid="${blog.id}">${blog.title}</h2>
                 <p>${blog.content}</p>
